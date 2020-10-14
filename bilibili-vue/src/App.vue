@@ -5,10 +5,19 @@
 </template>
 
 <script>
+import { rankingApi } from "./api";
 import TopContainer from "./components/commom/TopContainer";
 export default {
   name: "App",
-  components: { TopContainer }
+  components: { TopContainer },
+  mounted() {
+    // test api
+    rankingApi().then(res => {
+      console.log(res)
+    }).catch(error => {
+      console.log(error)
+    })
+  }
 }
 </script>
 
