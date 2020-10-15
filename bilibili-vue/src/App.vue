@@ -1,23 +1,16 @@
 <template>
   <div id="app">
     <TopContainer></TopContainer>
+    <BHeader></BHeader>
   </div>
 </template>
 
 <script>
-import { rankingApi } from "./api";
 import TopContainer from "./components/commom/TopContainer";
+import BHeader from "./components/commom/BHeader";
 export default {
   name: "App",
-  components: { TopContainer },
-  mounted() {
-    // test api
-    rankingApi().then(res => {
-      console.log(res)
-    }).catch(error => {
-      console.log(error)
-    })
-  }
+  components: { TopContainer, BHeader },
 }
 </script>
 

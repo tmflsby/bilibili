@@ -10,7 +10,7 @@ export const banner = serverRoot + "/banner"
 export const getSearchDefaultWords = serverRoot + "/getSearchDefaultWords"
 
 // 主站头部背景图
-export const topbg = serverRoot + "/topbg"
+export const headerBackground = serverRoot + "/topbg"
 
 // 各分类热门内容
 export const hot = serverRoot + "/hot"
