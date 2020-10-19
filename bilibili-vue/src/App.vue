@@ -2,15 +2,17 @@
   <div id="app">
     <TopContainer></TopContainer>
     <BHeader></BHeader>
+    <BMenu></BMenu>
   </div>
 </template>
 
 <script>
 import TopContainer from "./components/commom/TopContainer";
 import BHeader from "./components/commom/BHeader";
+import BMenu from "./components/commom/BMenu";
 export default {
   name: "App",
-  components: { TopContainer, BHeader },
+  components: { TopContainer, BHeader, BMenu },
 }
 </script>
 
