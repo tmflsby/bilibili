@@ -9,3 +9,9 @@ export const BANNER = "BANNER"
 
 // ranking
 export const RANKING = "RANKING"
+
+// promote
+export const PROMOTE = "PROMOTE"
+
+// promoteAd
+export const PROMOTE_AD = "PROMOTE_AD"

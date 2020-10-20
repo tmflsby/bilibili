@@ -3,14 +3,18 @@
     <div class="container-top-wrapper">
       <BContentTop></BContentTop>
     </div>
+    <div class="container-row">
+      <BPromote></BPromote>
+    </div>
   </div>
 </template>
 
 <script>
 import BContentTop from "./BContentTop";
+import BPromote from "./BPromote";
 export default {
   name: "BContent",
-  components: { BContentTop }
+  components: { BContentTop, BPromote }
 }
 </script>
 

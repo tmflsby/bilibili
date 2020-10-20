@@ -32,13 +32,6 @@ export const season = serverRoot + "/season"
 
 
 // 轮播图右边总排行
-// 3日排行
-export const ranking3 = serverRoot + "/ranking3"
-
-// 7日排行
-export const ranking7 = serverRoot + "/ranking7"
-
-// 昨日排行
 export const ranking = serverRoot + "/ranking"
 
 // 最底部特别推荐
