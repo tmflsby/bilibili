@@ -4,6 +4,7 @@ import Vuex from "vuex";
 Vue.use(Vuex)
 
 import headerStore from "./modules/headerStore";
+import contentTopStore from "./modules/contentTopStore";
 
 export default new Vuex.Store({
   state: {
@@ -13,6 +14,7 @@ export default new Vuex.Store({
 
   },
   modules: {
-    headerStore
+    headerStore,
+    contentTopStore
   }
 })

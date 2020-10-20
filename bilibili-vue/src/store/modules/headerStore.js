@@ -1,5 +1,5 @@
 import { headerBackgroundApi, getSearchDefaultWordsApi } from "@/api";
-import * as TYPE from "../constantType/headerType";
+import * as TYPE from "../constantType";
 
 const state = {
   headerBackground: "",

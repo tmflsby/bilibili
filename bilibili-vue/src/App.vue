@@ -3,16 +3,18 @@
     <TopContainer></TopContainer>
     <BHeader></BHeader>
     <BMenu></BMenu>
+    <BContent></BContent>
   </div>
 </template>
 
 <script>
-import TopContainer from "./components/commom/TopContainer";
-import BHeader from "./components/commom/BHeader";
-import BMenu from "./components/commom/BMenu";
+import TopContainer from "@/components/commom/TopContainer";
+import BHeader from "@/components/commom/BHeader";
+import BMenu from "@/components/commom/BMenu";
+import BContent from "@/components/content/BContent";
 export default {
   name: "App",
-  components: { TopContainer, BHeader, BMenu },
+  components: { TopContainer, BHeader, BMenu, BContent }
 }
 </script>
 

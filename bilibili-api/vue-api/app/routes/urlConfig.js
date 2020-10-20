@@ -2,7 +2,7 @@
 export const ding = 'http://www.bilibili.com/index/ding.json'
 
 // 轮播图
-export const banner = 'http://api.bilibili.com/x/web-show/res/loc?pf=0&id=23'
+export const banner = 'http://api.bilibili.com/x/web-show/res/loc?pf=7&id=1695'
 
 // 默认搜索单词
 export const getSearchDefaultWords = 'http://www.bilibili.com/widget/getSearchDefaultWords'
@@ -34,7 +34,7 @@ export const ranking3 = 'http://www.bilibili.com/index/ranking-3day.json'
 // 7日排行
 export const ranking7 = 'http://www.bilibili.com/index/ranking-week.json'
 // 昨日排行
-export const ranking = 'http://www.bilibili.com/index/ranking.json'
+export const ranking = 'https://api.bilibili.com/x/web-interface/ranking'
 
 // 最底部特别推荐
 export const recommend = 'http://www.bilibili.com/index/recommend.json'
