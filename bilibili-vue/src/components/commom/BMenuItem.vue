@@ -44,7 +44,7 @@ export default {
   display block
   height 50px
   &.home
-    width auto
+    width 38px
     a.i-link
       padding 0
       background url(../../assets/images/icons.png) -658px -1170px no-repeat
@@ -63,7 +63,7 @@ export default {
       font-size 16px
       background url(../../assets/images/icons.png) -664px -904px no-repeat
   &.live
-    margin-left 16px
+    margin-left 12px
     em
       padding-left 22px
       padding-right 0
@@ -85,7 +85,7 @@ export default {
       font-weight normal
       display inline-block
       vertical-align middle
-      margin 0 11px
+      margin 0 12px
       height 42px
       padding-top 8px
   .v-num
