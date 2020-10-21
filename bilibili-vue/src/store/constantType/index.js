@@ -15,3 +15,9 @@ export const PROMOTE = "PROMOTE"
 
 // promoteAd
 export const PROMOTE_AD = "PROMOTE_AD"
+
+// content
+export const CONTENT_ROW = "CONTENT_ROW"
+
+// content-ranking
+export const CONTENT_RANKING = "CONTENT_RANKING"

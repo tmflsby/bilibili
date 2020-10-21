@@ -1,9 +1,9 @@
 <template>
   <li class="top-item">
     <div class="v-item">
-      <a :href="`//www.bilibili.com/video/${contentTop.bvid}`" :title="contentTop.title" target="_blank">
+      <a :href="link" :title="contentTop.title" target="_blank">
         <div class="preview">
-          <img :src="contentTop.pic" :alt="contentTop.title">
+          <img v-lazy="contentTop.pic" src="" :alt="contentTop.title">
         </div>
         <div class="mask"></div>
         <div class="info">
@@ -23,6 +23,11 @@ export default {
     contentTop: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    link() {
+      return "//www.bilibili.com/video/" + this.contentTop.bvid
     }
   }
 }

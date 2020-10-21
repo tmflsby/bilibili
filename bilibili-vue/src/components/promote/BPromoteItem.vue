@@ -2,7 +2,7 @@
   <li>
     <div class="v">
       <a :href="promoteItem.url" class="preview" target="_blank">
-        <img :src="promoteItem.pic" :alt="promoteItem.title || promoteItem.name">
+        <img v-lazy="promoteItem.pic" src="" :alt="promoteItem.title || promoteItem.name">
         <div class="des" v-if="promoteItem.archive">
           <div class="title">{{promoteItem.title || promoteItem.name || promoteItem.archive.title}}</div>
           <div class="name">up主：{{promoteItem.archive.owner.name}}</div>
@@ -39,6 +39,12 @@ li
     height 148px
     font-size 12px
     overflow hidden
+    &:hover
+      .preview
+        .des
+          color #00a1d6
+          .title
+            color #00a1d6
     .preview
       width: 100%
       height: 100%

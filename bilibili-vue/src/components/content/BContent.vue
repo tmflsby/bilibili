@@ -6,15 +6,31 @@
     <div class="container-row">
       <BPromote></BPromote>
     </div>
+    <div class="container-row" v-for="contentRow in contentRows" :key="contentRow.b_id">
+      <BContentRow :category="contentRow.category"
+                   :categoryId="contentRow.categoryId"
+                   :contentRow="contentRow.item"
+      ></BContentRow>
+    </div>
   </div>
 </template>
 
 <script>
 import BContentTop from "./BContentTop";
 import BPromote from "./BPromote";
+import BContentRow from "./BContentRow";
+import { mapState } from "vuex";
 export default {
   name: "BContent",
-  components: { BContentTop, BPromote }
+  components: { BContentTop, BPromote, BContentRow },
+  computed: {
+    ...mapState({
+      contentRows: state => state.contentRowStore.contentRows
+    })
+  },
+  mounted() {
+    this.$store.dispatch("ding")
+  }
 }
 </script>
 

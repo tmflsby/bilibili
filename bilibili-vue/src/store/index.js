@@ -6,6 +6,7 @@ Vue.use(Vuex)
 import headerStore from "./modules/headerStore";
 import contentTopStore from "./modules/contentTopStore";
 import promoteStore from "./modules/promoteStore";
+import contentRowStore from "./modules/contentRowStore";
 
 export default new Vuex.Store({
   state: {
@@ -17,6 +18,7 @@ export default new Vuex.Store({
   modules: {
     headerStore,
     contentTopStore,
-    promoteStore
+    promoteStore,
+    contentRowStore
   }
 })

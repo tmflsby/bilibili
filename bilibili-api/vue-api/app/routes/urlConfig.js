@@ -33,8 +33,8 @@ export const season = 'http://www.bilibili.com/api_proxy?app=bangumi&action=get_
 export const ranking3 = 'http://www.bilibili.com/index/ranking-3day.json'
 // 7日排行
 export const ranking7 = 'http://www.bilibili.com/index/ranking-week.json'
-// 昨日排行
-export const ranking = 'https://api.bilibili.com/x/web-interface/ranking'
+// 单日排行
+export const ranking = 'https://api.bilibili.com/x/web-interface/ranking?rid={rid}&day={day}'
 
 // 最底部特别推荐
 export const recommend = 'http://www.bilibili.com/index/recommend.json'
