@@ -3,13 +3,13 @@
        @mouseenter="showBannerTitle" @mouseleave="showBannerTitle"
   >
     <div class="header-layer">
-      <img class="header-bg" :src="headerBackground" alt="">
-      <img class="header-bg-logo" :src="headerBackgroundLogo" alt="">
+      <img v-lazy="headerBackground" class="header-bg" src="" alt="">
+      <img v-lazy="headerBackgroundLogo" class="header-bg-logo" src="" alt="">
     </div>
     <a :href="headerBackgroundUrl" class="header-link"></a>
     <div class="h-center">
       <a href="" class="log"></a>
-      <div v-show="isBannerTitleHover" class="banner-title">
+      <div v-if="headerBackgroundName" v-show="isBannerTitleHover" class="banner-title">
         {{headerBackgroundName}}
       </div>
     </div>

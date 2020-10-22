@@ -20,4 +20,4 @@ export const PROMOTE_AD = "PROMOTE_AD"
 export const CONTENT_ROW = "CONTENT_ROW"
 
 // content-ranking
-export const CONTENT_RANKING = "CONTENT_RANKING"
+// export const CONTENT_RANKING = "CONTENT_RANKING"

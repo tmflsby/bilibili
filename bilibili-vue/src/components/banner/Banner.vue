@@ -13,7 +13,6 @@
       <div class="s-bottom">
         <div class="title" v-if="bannerList[count]">
           <span>
-						<img v-if="bannerList[count].is_ad" src="//static.hdslb.com/images/base/ad.png" alt="">
 						<a :href="bannerList[count].url" target="_blank">
               {{ bannerList[count].name }}
             </a>
@@ -30,10 +29,10 @@
 </template>
 
 <script>
-  import BannerItem from "./BannerItem";
-  import {mapState} from "vuex";
+import BannerItem from "./BannerItem";
+import {mapState} from "vuex";
 
-  export default {
+export default {
   name: "Banner",
   components: { BannerItem },
   data() {

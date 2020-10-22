@@ -3,7 +3,7 @@
     <div class="z_top b-header-blur b-header-blur-black">
       <div class="b-header-mask-wrp">
         <div class="b-header-mask-bg">
-          <img :src="headerBackground" alt="">
+          <img v-lazy="headerBackground" src="" alt="">
           <div class="b-header-mask"></div>
         </div>
       </div>

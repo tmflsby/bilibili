@@ -6,7 +6,7 @@
     <div class="container-row">
       <BPromote></BPromote>
     </div>
-    <div class="container-row" v-for="contentRow in contentRows" :key="contentRow.b_id">
+    <div class="container-row" v-for="contentRow in contentRows" :key="contentRow.b_id" :id="contentRow.b_id">
       <BContentRow :contentRow="contentRow"></BContentRow>
     </div>
   </div>
@@ -24,9 +24,6 @@ export default {
     ...mapState({
       contentRows: state => state.contentRowStore.contentRows
     })
-  },
-  mounted() {
-    this.$store.dispatch("ding")
   }
 }
 </script>

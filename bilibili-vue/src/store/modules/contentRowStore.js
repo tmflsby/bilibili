@@ -4,7 +4,6 @@ import * as TYPE from "../constantType";
 const state = {
   sortKeys: ['douga', 'bangumi', 'guochuang', 'teleplay', 'movie', 'music', 'dance', 'game', 'technology', 'life', 'kichiku', 'fashion', 'ent'],
   contentRows: [],
-  regionRanking: {},
 }
 
 const getters = {
@@ -19,6 +18,7 @@ const actions = {
     for (let i = 0; i < state.sortKeys.length; i++) {
       let category = state.sortKeys[i]
       let title = "", titleLink = "", rankingLink = ""
+
       switch (category) {
         case 'douga':
           title = '动画'
@@ -91,17 +91,26 @@ const actions = {
           rankingLink = ''
       }
 
-      let rowItem = {
-        category,
+      contentRows.push({
         b_id: `b_${category}`,
         item: Object.values(result[category]),
+        category,
         title,
         titleLink,
         rankingLink
-      }
-      contentRows.push(rowItem)
+      })
     }
     console.log(contentRows)
+    commit(TYPE.CONTENT_ROW, { contentRows })
+  },
+  async changDing({ commit }, category) {
+    const result = await dingApi()
+    const contentRows = state.contentRows
+    for (let i = 0; i < contentRows.length; i++) {
+      if (contentRows[i].category === category) {
+        contentRows[i].item = Object.values(result[category])
+      }
+    }
     commit(TYPE.CONTENT_ROW, { contentRows })
   }
 }

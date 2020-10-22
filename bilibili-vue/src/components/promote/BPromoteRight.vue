@@ -11,7 +11,7 @@
       <div class="index-promote">
         <div class="pmt-item pmt-mid">
           <a :href="promoteAdList[0].url" target="_blank">
-            <img :src="promoteAdList[0].pic" :alt="promoteAdList[0].title || promoteAdList[0].name">
+            <img v-lazy="promoteAdList[0].pic" src="" :alt="promoteAdList[0].title || promoteAdList[0].name">
           </a>
         </div>
       </div>

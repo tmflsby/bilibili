@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     change() {
-      this.$store.dispatch("ding")
+      this.$store.dispatch("changDing", this.category)
     }
   }
 }

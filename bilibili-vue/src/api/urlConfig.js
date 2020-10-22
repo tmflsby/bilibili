@@ -13,7 +13,7 @@ export const getSearchDefaultWords = serverRoot + "/getSearchDefaultWords"
 export const headerBackground = serverRoot + "/topbg"
 
 // 各分类热门内容
-export const hot = serverRoot + "/hot"
+// export const hot = serverRoot + "/hot"
 
 // 推广
 export const promote = serverRoot + "/promote"
@@ -22,13 +22,13 @@ export const promote = serverRoot + "/promote"
 export const promoteAd = serverRoot + "/promoteAd"
 
 // 直播
-export const liveXhr = serverRoot + "/liveXhr"
+// export const liveXhr = serverRoot + "/liveXhr"
 
 // 番剧下方更新列表右侧新番放送表上侧
-export const slideshow = serverRoot + "/slideshow"
+// export const slideshow = serverRoot + "/slideshow"
 
 // 番剧下方更新列表右侧新番放送表下侧
-export const season = serverRoot + "/season"
+// export const season = serverRoot + "/season"
 
 
 // 轮播图右边总排行
@@ -38,4 +38,4 @@ export const ranking = serverRoot + "/ranking"
 export const regionRanking = serverRoot + "/ranking/region"
 
 // 最底部特别推荐
-export const recommend = serverRoot + "/recommend"
+// export const recommend = serverRoot + "/recommend"

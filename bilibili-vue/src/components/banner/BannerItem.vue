@@ -1,7 +1,7 @@
 <template>
   <li class="banner-item" v-if="banner">
     <a class="b-link" :href="banner.url" target="_blank">
-      <img :src="banner.pic" alt="">
+      <img v-lazy="banner.pic" src="" alt="">
     </a>
   </li>
 </template>
