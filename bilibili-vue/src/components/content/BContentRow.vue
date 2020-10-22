@@ -1,11 +1,14 @@
 <template>
   <div class="b-section-body">
     <div class="b-l">
-      <BContentRowHead :category="category"></BContentRowHead>
-      <BContentRowBody :contentRow="contentRow"></BContentRowBody>
+      <BContentRowHead :category="contentRow.category"
+                       :contentRowHeadTitle="contentRow.title"
+                       :contentRowHeadLink="contentRow.titleLink"
+      ></BContentRowHead>
+      <BContentRowBody :contentRowBody="contentRow.item"></BContentRowBody>
     </div>
     <div class="b-r">
-      <BContentRowRanking :category="category" :categoryId="categoryId"></BContentRowRanking>
+      <BContentRowRanking :contentRowBody="contentRow.item" :contentRowRankingLink="contentRow.rankingLink"></BContentRowRanking>
     </div>
   </div>
 </template>
@@ -18,16 +21,8 @@ export default {
   name: "BContentRow",
   components: { BContentRowHead, BContentRowBody, BContentRowRanking },
   props: {
-    category: {
-      type: String,
-      required: true
-    },
-    categoryId: {
-      type: Number,
-      required: true
-    },
     contentRow: {
-      type: Array,
+      type: Object,
       required: true
     }
   }

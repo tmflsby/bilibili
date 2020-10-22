@@ -9,7 +9,7 @@
         <!-- 边框 -->
         <div class="border"></div>
         <!-- 背景图片 -->
-        <img v-lazy="contentRowItem.pic" alt="" src="">
+        <img v-lazy="contentRowBodyItem.pic" alt="" src="">
         <!-- 内容预览 -->
         <div class="back">
           <div></div>
@@ -23,20 +23,20 @@
         </div>
         <!-- 视频时间 -->
         <div class="x">
-          <b class="x2">{{contentRowItem.duration}}</b>
+          <b class="x2">{{contentRowBodyItem.duration}}</b>
         </div>
       </a>
       <!-- 下部分 -->
-      <a :href="link" :title="contentRowItem.title" target="_blank">
-        <div class="t">{{contentRowItem.title}}</div>
+      <a :href="link" :title="contentRowBodyItem.title" target="_blank">
+        <div class="t">{{contentRowBodyItem.title}}</div>
         <div class="i">
 					<span>
 						<i class="b-icon b-icon-v-play"></i>
-            {{contentRowItem.stat.view}}
+            {{contentRowBodyItem.stat.view}}
           </span>
           <span>
 						<i class="b-icon b-icon-v-dm"></i>
-						{{contentRowItem.stat.reply}}
+						{{contentRowBodyItem.stat.reply}}
 					</span>
         </div>
       </a>
@@ -48,14 +48,14 @@
 export default {
   name: "BContentRowItem",
   props: {
-    contentRowItem: {
+    contentRowBodyItem: {
       type: Object,
       required: true
     }
   },
   computed: {
     link() {
-      return '//www.bilibili.com/video/' + this.contentRowItem.bvid
+      return '//www.bilibili.com/video/' + this.contentRowBodyItem.bvid
     }
   }
 }

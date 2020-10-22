@@ -1,6 +1,6 @@
 import Router from 'koa-router'
 import axios from 'axios'
-import { ranking3, ranking7, ranking, rankbase } from './urlConfig'
+import { ranking3, ranking7, ranking, rankbase, regionRanking } from './urlConfig'
 
 const router = Router()
 
@@ -21,6 +21,13 @@ router.get('/ranking7', async (ctx, next) => {
 // 昨日排行
 router.get('/ranking', async (ctx, next) => {
   let response = await axios.get(ranking)
+  ctx.body = response.data
+})
+
+// 分类排行
+router.get('/ranking/region', async (ctx, next) => {
+  let tid = ctx.query.tid
+  let response = await axios.get(regionRanking.replace("{tid}", tid))
   ctx.body = response.data
 })
 

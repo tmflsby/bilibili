@@ -34,5 +34,8 @@ export const season = serverRoot + "/season"
 // 轮播图右边总排行
 export const ranking = serverRoot + "/ranking"
 
+// 分类排行
+export const regionRanking = serverRoot + "/ranking/region"
+
 // 最底部特别推荐
 export const recommend = serverRoot + "/recommend"

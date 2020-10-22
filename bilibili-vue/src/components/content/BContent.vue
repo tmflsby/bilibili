@@ -7,10 +7,7 @@
       <BPromote></BPromote>
     </div>
     <div class="container-row" v-for="contentRow in contentRows" :key="contentRow.b_id">
-      <BContentRow :category="contentRow.category"
-                   :categoryId="contentRow.categoryId"
-                   :contentRow="contentRow.item"
-      ></BContentRow>
+      <BContentRow :contentRow="contentRow"></BContentRow>
     </div>
   </div>
 </template>

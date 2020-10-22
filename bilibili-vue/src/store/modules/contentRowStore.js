@@ -3,20 +3,13 @@ import * as TYPE from "../constantType";
 
 const state = {
   sortKeys: ['douga', 'bangumi', 'guochuang', 'teleplay', 'movie', 'music', 'dance', 'game', 'technology', 'life', 'kichiku', 'fashion', 'ent'],
-  sortIds: [1,2,3,4,5,6,7,8,9,10,11,12,13],
-  sortValues: ['动画', '番剧', '国创', '剧集', '电影', '音乐', '舞蹈', '游戏', '科技', '生活', '鬼畜', '时尚', '娱乐'],
   contentRows: [],
-  contentRankings: [],
-  contentRanking: {}
+  regionRanking: {},
 }
 
 const getters = {
   sortKeys: state => state.sortKeys,
-  sortIds: state => state.sortIds,
-  sortValues: state => state.sortValues,
   contentRows: state => state.contentRows,
-  contentRankings: state => state.contentRankings,
-  contentRanking: state => state.contentRanking
 }
 
 const actions = {
@@ -25,22 +18,92 @@ const actions = {
     const contentRows = []
     for (let i = 0; i < state.sortKeys.length; i++) {
       let category = state.sortKeys[i]
+      let title = "", titleLink = "", rankingLink = ""
+      switch (category) {
+        case 'douga':
+          title = '动画'
+          titleLink = 'https://www.bilibili.com/v/douga'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/douga'
+          break
+        case 'bangumi':
+          title = '番剧'
+          titleLink = 'https://www.bilibili.com/anime'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/bangumi'
+          break
+        case 'guochuang':
+          title = '国创'
+          titleLink = 'https://www.bilibili.com/guochuang'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/guochuang'
+          break
+        case 'music':
+          title = '音乐'
+          titleLink = 'https://www.bilibili.com/v/music/'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/music'
+          break
+        case 'dance':
+          title = '舞蹈'
+          titleLink = 'https://www.bilibili.com/v/dance'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/dance'
+          break
+        case 'game':
+          title = '游戏'
+          titleLink = 'https://www.bilibili.com/v/game'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/game'
+          break
+        case 'technology':
+          title = '知识'
+          titleLink = 'https://www.bilibili.com/v/technology'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/technology'
+          break
+        case 'life':
+          title = '生活'
+          titleLink = 'https://www.bilibili.com/v/life'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/life'
+          break
+        case 'kichiku':
+          title = '鬼畜'
+          titleLink = 'https://www.bilibili.com/v/kichiku'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/kichiku'
+          break
+        case 'fashion':
+          title = '时尚'
+          titleLink = 'https://www.bilibili.com/v/fashion'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/fashion'
+          break
+        case 'ent':
+          title = '娱乐'
+          titleLink = 'https://www.bilibili.com/v/ent'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/ent'
+          break
+        case 'movie':
+          title = '电影'
+          titleLink = 'https://www.bilibili.com/movie'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/movie'
+          break
+        case 'teleplay':
+          title = '电视剧'
+          titleLink = 'https://www.bilibili.com/tv'
+          rankingLink = 'https://www.bilibili.com/v/popular/rank/tv'
+          break
+        default:
+          title =""
+          titleLink = ""
+          rankingLink = ''
+      }
+
       let rowItem = {
         category,
-        categoryId: state.sortIds[i],
-        name: state.sortValues[i],
         b_id: `b_${category}`,
-        item: Object.values(result[category])
+        item: Object.values(result[category]),
+        title,
+        titleLink,
+        rankingLink
       }
       contentRows.push(rowItem)
     }
     console.log(contentRows)
     commit(TYPE.CONTENT_ROW, { contentRows })
-  },
-  // async contentRanking({ commit }) {
-  //   const result = await rankingApi()
-  //   console.log(result)
-  // }
+  }
 }
 
 const mutations = {

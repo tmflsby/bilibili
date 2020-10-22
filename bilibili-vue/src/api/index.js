@@ -7,10 +7,12 @@ export const getSearchDefaultWordsApi = () => serviceRequest(URL.getSearchDefaul
 
 export const bannerApi = () => serviceRequest(URL.banner)
 
-export const rankingApi = (rid, day) => serviceRequest(URL.ranking, {rid, day})
+export const rankingApi = () => serviceRequest(URL.ranking)
 
 export const promoteApi = () => serviceRequest(URL.promote)
 
 export const promoteAdApi = () => serviceRequest(URL.promoteAd)
 
 export const dingApi = () => serviceRequest(URL.ding)
+
+export const regionRankingApi = (tid) => serviceRequest(URL.regionRanking, {params: {tid}})

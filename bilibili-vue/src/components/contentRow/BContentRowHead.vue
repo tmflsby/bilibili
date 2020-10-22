@@ -2,13 +2,14 @@
   <div class="b-head">
     <span class="b-head-i" :class="category"></span>
     <span class="b-head-t">
-			<a :href="head.link" :title="head.title">
-				<h2>{{head.title}}</h2>
+			<a :href="contentRowHeadLink" :title="contentRowHeadTitle">
+				<h2>{{contentRowHeadTitle}}</h2>
 			</a>
 		</span>
     <div class="b-link-more">
-      <a :href="head.link">
-        更多<i class="b-icon b-icon-arrow-r"></i>
+      <a :href="contentRowHeadLink">
+        更多
+        <i class="b-icon b-icon-arrow-r"></i>
       </a>
     </div>
     <div class="change" @click="change">
@@ -27,87 +28,14 @@ export default {
     category: {
       type: String,
       required: true
-    }
-  },
-  computed: {
-    head() {
-      let head = {}
-      let title = ""
-      let link = ""
-      if (this.category) {
-        switch (this.category) {
-          case 'douga':
-            title = '动画'
-            link = 'https://www.bilibili.com/v/douga'
-            head = { title, link }
-            break
-          case 'bangumi':
-            title = '番剧'
-            link = 'https://www.bilibili.com/anime'
-            head = { title, link }
-            break
-          case 'guochuang':
-            title = '国创'
-            link = 'https://www.bilibili.com/guochuang'
-            head = { title, link }
-            break
-          case 'music':
-            title = '音乐'
-            link = 'https://www.bilibili.com/v/music/'
-            head = { title, link }
-            break
-          case 'dance':
-            title = '舞蹈'
-            link = 'https://www.bilibili.com/v/dance'
-            head = { title, link }
-            break
-          case 'game':
-            title = '游戏'
-            link = 'https://www.bilibili.com/v/game'
-            head = { title, link }
-            break
-          case 'technology':
-            title = '知识'
-            link = 'https://www.bilibili.com/v/technology'
-            head = { title, link }
-            break
-          case 'life':
-            title = '生活'
-            link = 'https://www.bilibili.com/v/life'
-            head = { title, link }
-            break
-          case 'kichiku':
-            title = '鬼畜'
-            link = 'https://www.bilibili.com/v/kichiku'
-            head = { title, link }
-            break
-          case 'fashion':
-            title = '时尚'
-            link = 'https://www.bilibili.com/v/fashion'
-            head = { title, link }
-            break
-          case 'ent':
-            title = '娱乐'
-            link = 'https://www.bilibili.com/v/ent'
-            head = { title, link }
-            break
-          case 'movie':
-            title = '电影'
-            link = 'https://www.bilibili.com/movie'
-            head = { title, link }
-            break
-          case 'teleplay':
-            title = '剧集'
-            link = 'https://www.bilibili.com/tv'
-            head = { title, link }
-            break
-          default:
-            title =""
-            link = ""
-            head = { title, link }
-        }
-      }
-      return head
+    },
+    contentRowHeadTitle: {
+      type: String,
+      required: true
+    },
+    contentRowHeadLink: {
+      type: String,
+      required: true
     }
   },
   methods: {

@@ -1,7 +1,7 @@
 <template>
   <div class="b-body">
     <ul class="vidbox v-list">
-      <BContentRowItem v-for="item in contentRow" :key="item.aid" :contentRowItem="item"></BContentRowItem>
+      <BContentRowItem v-for="item in contentRowBody" :key="item.aid" :contentRowBodyItem="item"></BContentRowItem>
     </ul>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
   name: "BContentRowBody",
   components: { BContentRowItem },
   props: {
-    contentRow: {
+    contentRowBody: {
       type: Array,
       required: true
     }
